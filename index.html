@@ -17,13 +17,16 @@
     ></script>
 
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400&family=Roboto:wght@100;300;400;500&family=Tillana:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400&family=Roboto:wght@100;300;400;500&family=Tillana:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>weather-app</title>
   </head>
@@ -31,17 +34,9 @@
     <div class="container">
       <div class="weather-app">
         <div class="border-card">
- 
-  <div class="row">
-         <div class="col-3">
-            <span class="location-icon">
-              <i class="fa-solid fa-location-dot"></i
-            ></span>
-            <span class="city">Genoa</span>
-             
-</div>
- 
-              <div class="col-6">
+          <form id="form-input">
+            <div class="row">
+              <div class="col-9">
                 <input
                   type="text"
                   placeholder="Type a city..."
@@ -53,75 +48,64 @@
               <div class="col-3">
                 <input type="submit" value="Search" class="search-button" />
               </div>
-        
-         
+            </div>
+          </form>
+          <span class="location-icon">
+            <i class="fa-solid fa-location-dot"> </i>
+          </span>
+          <span class="city" id="city">Genoa</span>
+
+          <div class="date" id="date-time">Tuseday - March 22</div>
+
+          <p class="time" id="time">22:52</p>
+
+          <div class="row">
+            <div class="col-2">
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAg5JREFUeNrt2tGRgyAQBmBLoARLSAmUkBIsISVYgiVYgiVQgq//myXQAfdwS4bJqRFuCWjWmZ3JaGYin8AumMY513xzNAIgAAIgAAIgAAIgAAIgAALwe4LhANACGADMANxLzHStbQoc2QGoce5g9JcBAKA2nvi7mAGoUwP8o/FPhOoBAGgAIwBD0ftxHNntiw6HJICdBiqa8BxD2E9MjNEAAO4bNzwxPn0fA/WsbNkjBWDZuNkHXZ8ZAQ5DfQQAwG3nJjR9xxWKpOwRC6D3AGgOcGdCYAMI0p8rHEMWAGq82Zit++B7roJoWQEAdBs/NPouR/PDUAnAwAaw0+27YKEzVdLw6EryCIDZabymIeBqC06AP93+QEa4LMASlLv2GwF81zc1N54bwJe29kA1WHMY/wBjAe4vY388KUBYLbY5FkNniudSOwXAXSTmlLWAKtRl/a4T91K7qxlgXKvpKQVzzUOmxiFgg70FBeBBu0I9fVacVWiNk6AOFmB2A6gLUrIO9wAoa5mcADnT4Phm9blWlClC0B6Pzve5AHIWQm1EmW1pSNiVcv129GGlboubXGmJGsWS56l37GFOqQA5FkMmputGDKeRLQ1+4mAEWKp4OxzR6KXEirA4QOZ9RPPuHWNRAMb3iMmbpKUBdOkNktIAt+oB5F9iAiAAAiAAAiAAAiAAAiAAAiAAAiAAl48fFVnRpiVnD+AAAAAASUVORK5CYII="
+                class="main-icon"
+                id="icon"
+              />
+            </div>
+
+            <div class="col-4">
+              <ul class="main-temp-data">
+                <li class="temp" id="temperature">27˚C</li>
+                <li class="high-temp" id="max">30˚</li>
+                <li class="low-temp" id="min">20˚</li>
+                <li class="feel-like">feels like</li>
+                <li class="feel-like-temp" id="feel-like-temp">23˚</li>
+              </ul>
+            </div>
+
+            <div class="col-4">
+              <ul class="discription">
+                <li class="wind" id="wind">wind= 3m/h</li>
+                <li class="Humidity" id="humidity">Humidity= 70%</li>
+                <li class="sunrise" id="sunrise">sunrise= 3:45 AM</li>
+                <li class="sunset" id="sunset">sunset= 6:20 PM</li>
+              </ul>
+            </div>
+            <p class="condition" id="condition">cloudy</p>
+            <div class="weather-forecast">
+              <div class="row">
+                <div class="col-2">
+                  <div class="forecast-date">Thu</div>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAZ9JREFUaN7tmdGNgzAMhhmBERiBEVjgJEbICIyQERiBTS4j5JU3RmCDnHNyq1wE1A4Jl0iJ9KtqVdv/R+xA1cYY05Ssos1XgCwBOGtd1x4kPfVNwhUFAI1rkDmRTgVyGwCMiQvjvkRWAGBoYJh/qc8JQAcAqCwAsO9NoBbQ5n1m38+g9ikAeQPgSjtofAJgTgTw0lg6wE5ppyAAmxj72CTWHB0Ae39/wPzvYEcDwKuuHzL+VkyAx81HA0h4ZKYHwNbZ/wvg4KFQcAFEJub/3Mk5ADJDgPcRWzKAVVc6wFQ6gKQA9EUD4H1AFdtCN3465jHEua8KUCzA1/c6gBbQxikI35cgZV8ZMae1ggAgUWuTgQxqIBqZnBhFjLmsFQognYRWI9HI7sRoxo6d1mIDQILOS0i9kosXNxBiPtYKAVBe0o7Yw27MQoT+WIsFYLfPSyiJRrQTY9uoJcSQapEBDoZpIxqZPCNTwOCe1uIAZDO4oQBbwOAK7uBya3EAFs7gHpwipMHl1uIADLi1XcNYGCOYMeRa9W/WClABKkAFiKofRnoGaQBkK9wAAAAASUVORK5CYII="
+                    width="42"
+                  />
+                  <div class="forecast-temp">
+                    <span class="forecast-temp-max">20˚</span>
+                    <span class="forecast-temp-min">10˚</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-           
-<span class="date">Tuseday - March 22</span>
 
-<p class="time">22:52</p>
-
-  <div class="row">
-    <div class="col-2">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAg5JREFUeNrt2tGRgyAQBmBLoARLSAmUkBIsISVYgiVYgiVQgq//myXQAfdwS4bJqRFuCWjWmZ3JaGYin8AumMY513xzNAIgAAIgAAIgAAIgAAIgAALwe4LhANACGADMANxLzHStbQoc2QGoce5g9JcBAKA2nvi7mAGoUwP8o/FPhOoBAGgAIwBD0ftxHNntiw6HJICdBiqa8BxD2E9MjNEAAO4bNzwxPn0fA/WsbNkjBWDZuNkHXZ8ZAQ5DfQQAwG3nJjR9xxWKpOwRC6D3AGgOcGdCYAMI0p8rHEMWAGq82Zit++B7roJoWQEAdBs/NPouR/PDUAnAwAaw0+27YKEzVdLw6EryCIDZabymIeBqC06AP93+QEa4LMASlLv2GwF81zc1N54bwJe29kA1WHMY/wBjAe4vY388KUBYLbY5FkNniudSOwXAXSTmlLWAKtRl/a4T91K7qxlgXKvpKQVzzUOmxiFgg70FBeBBu0I9fVacVWiNk6AOFmB2A6gLUrIO9wAoa5mcADnT4Phm9blWlClC0B6Pzve5AHIWQm1EmW1pSNiVcv129GGlboubXGmJGsWS56l37GFOqQA5FkMmputGDKeRLQ1+4mAEWKp4OxzR6KXEirA4QOZ9RPPuHWNRAMb3iMmbpKUBdOkNktIAt+oB5F9iAiAAAiAAAiAAAiAAAiAAAiAAAiAAl48fFVnRpiVnD+AAAAAASUVORK5CYII=" class="main-icon"/>
- </div>
-   <div class="col-4">
-<ul>
-<li class="temp">
-  27˚C
-  <ul>
-<li class="high-temp">
-  30˚
-</li>
-<li class="low-temp">
-20˚
-</li>
-  </ul>
-</li>
-
-<li class="feel-like">
-  feels like
-  <ul>
-    <li class="feel-like-temp">
-23˚
-</li>
-  </ul>
-</li>
-</ul> 
-</div>
-
-<div class="col-4">
-<ul class="discription">
-  <li class="wind">
-    wind= 3m/h
-  </li>
-  <li class="sunrise">
-    sunrise= 3:45 AM
-  </li>
-  <li class="sunset">
-    sunset= 6:20 PM
-  </li>
-</ul>
-</div>
-
-<div class="weather-forecast">
-  <div class="row">
-    <div class="col-2">
-      <div class="forecast-date">
-        Thu
-      </div>
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAZ9JREFUaN7tmdGNgzAMhhmBERiBEVjgJEbICIyQERiBTS4j5JU3RmCDnHNyq1wE1A4Jl0iJ9KtqVdv/R+xA1cYY05Ssos1XgCwBOGtd1x4kPfVNwhUFAI1rkDmRTgVyGwCMiQvjvkRWAGBoYJh/qc8JQAcAqCwAsO9NoBbQ5n1m38+g9ikAeQPgSjtofAJgTgTw0lg6wE5ppyAAmxj72CTWHB0Ae39/wPzvYEcDwKuuHzL+VkyAx81HA0h4ZKYHwNbZ/wvg4KFQcAFEJub/3Mk5ADJDgPcRWzKAVVc6wFQ6gKQA9EUD4H1AFdtCN3465jHEua8KUCzA1/c6gBbQxikI35cgZV8ZMae1ggAgUWuTgQxqIBqZnBhFjLmsFQognYRWI9HI7sRoxo6d1mIDQILOS0i9kosXNxBiPtYKAVBe0o7Yw27MQoT+WIsFYLfPSyiJRrQTY9uoJcSQapEBDoZpIxqZPCNTwOCe1uIAZDO4oQBbwOAK7uBya3EAFs7gHpwipMHl1uIADLi1XcNYGCOYMeRa9W/WClABKkAFiKofRnoGaQBkK9wAAAAASUVORK5CYII=" width="42" />
-      <div class="forecast-temp">
-        <span class="forecast-temp-max">20˚</span>
-        <span class="forecast-temp-min">10˚</span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-        </div>
-       <footer>
+        <footer>
           <a
             href="https://github.com/LeylaNj/Magnolia-weather-app"
             target="_blank"
@@ -131,6 +115,7 @@
           by Leyla Najafi
         </footer>
       </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

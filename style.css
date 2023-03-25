@@ -5,6 +5,9 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   padding: 20px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/579/original/png-transparent-graphy-of-blue-sky-sky-desktop-atmosphere-of-earth-cloud-sky-blue-atmosphere-computer-wallpaper.png?1679781888");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .weather-app {
@@ -12,46 +15,47 @@ body {
   margin: 40px auto;
 }
 .search-form {
-  padding: 5px 90px;
-  margin-bottom: 40px;
+  padding: 5px 120px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .search-button {
   padding: 5px 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .city {
   text-align: center;
-  font-size: 26px;
+  font-size: 28px;
   color: #3d3b3b;
-  margin-bottom: 30px;
   font-weight: 400;
 }
 .location-icon {
   text-align: center;
-  font-size: 20px;
+  font-size: 23px;
   margin-left: 20px;
   position: relative;
-  top: -4px;
-  left: -4px;
+  top: -7;
+  left: 4;
 }
 
 .date {
   font-size: 24px;
   margin-left: 20px;
   font-weight: 300;
+  margin-top: 15px;
 }
 
 .time {
   font-size: 42px;
-  margin-left: 50px;
+  margin-left: 30px;
   margin-top: 15px;
 }
 .main-icon {
-  height: 90px;
-  width: 90px;
+  height: 120px;
+  width: 120px;
   position: relative;
-  left: 20px;
-  top: -3px;
+  left: 3px;
+  top: -20px;
 }
 ul {
   margin: 0;
@@ -60,6 +64,9 @@ ul {
   text-align: center;
   font-weight: 200;
 }
+.main-temp-data {
+  margin-left: 40px;
+}
 li:first-letter {
   text-transform: capitalize;
 }
@@ -67,22 +74,36 @@ li:first-letter {
   font-size: 38px;
   font-weight: 300;
 }
+.condition {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 20px;
+  position: relative;
+  top: -75px;
+  font-style: italic;
+}
+p:first-letter {
+  text-transform: capitalize;
+}
 .high-temp {
   font-size: 18px;
-  position: relative;
-  top: -60px;
-  left: 70px;
-}
-.low-temp {
-  font-size: 18px;
+  font-weight: 300;
   position: relative;
   top: -55px;
   left: 70px;
 }
+.low-temp {
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  top: -50px;
+  left: 70px;
+}
 .feel-like-temp {
   font-size: 18px;
+  font-weight: 300;
   position: relative;
-  top: -28px;
+  top: -80px;
   left: 70px;
 }
 .feel-like {
@@ -101,10 +122,11 @@ footer {
   color: rgb(158, 65, 245);
 }
 .discription {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 500;
   text-align: left;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 30px;
+  position: relative;
+  top: 4px;
 }
